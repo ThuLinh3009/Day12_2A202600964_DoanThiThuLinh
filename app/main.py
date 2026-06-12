@@ -38,15 +38,16 @@ START_TIME = time.time()
 _is_ready = False
 _request_count = 0
 _error_count = 0
-_assistant = None          # ShoppingAssistant singleton
-_executor = ThreadPoolExecutor(max_workers=4)   # for sync LangGraph calls
+_assistant = None          # ShoppingAssistant singleton (lazy-loaded)
+_assistant_lock = asyncio.Lock()
+_executor = ThreadPoolExecutor(max_workers=2)   # for sync LangGraph calls
 
 # ─────────────────────────────────────────────────────────
-# Lifespan — init shopping assistant once at startup
+# Lifespan — minimal startup, assistant lazy-loaded on first /ask
 # ─────────────────────────────────────────────────────────
 @asynccontextmanager
 async def lifespan(app: FastAPI):
-    global _assistant, _is_ready
+    global _is_ready
 
     logger.info(json.dumps({
         "event": "startup",
@@ -55,32 +56,48 @@ async def lifespan(app: FastAPI):
         "environment": settings.environment,
         "llm_provider": settings.llm_provider,
         "llm_model": settings.llm_model,
+        "mode": "lazy_load",
     }))
 
-    try:
-        import sys, os
-        src_path = os.path.abspath(os.path.join(os.path.dirname(__file__), "..", "src"))
-        if src_path not in sys.path:
-            sys.path.insert(0, src_path)
-
-        from shopping_entry import load_assistant
-        ShoppingAssistant, ShoppingSettings = load_assistant()
-
-        shopping_settings = ShoppingSettings.load()
-        _assistant = ShoppingAssistant(shopping_settings)
-        logger.info(json.dumps({"event": "shopping_assistant_ready"}))
-    except Exception as e:
-        logger.error(json.dumps({"event": "startup_error", "error": str(e)}))
-        _assistant = None
-
+    # Mark ready immediately — assistant loads on first /ask
     _is_ready = True
-    logger.info(json.dumps({"event": "ready"}))
+    logger.info(json.dumps({"event": "ready", "note": "assistant will load on first request"}))
 
     yield
 
     _is_ready = False
     _executor.shutdown(wait=False)
     logger.info(json.dumps({"event": "shutdown"}))
+
+
+def _load_assistant_sync():
+    """Load shopping assistant synchronously (called once, in thread pool)."""
+    import sys, os
+    src_path = os.path.abspath(os.path.join(os.path.dirname(__file__), "..", "src"))
+    if src_path not in sys.path:
+        sys.path.insert(0, src_path)
+    from shopping_entry import load_assistant
+    ShoppingAssistant, ShoppingSettings = load_assistant()
+    shopping_settings = ShoppingSettings.load()
+    return ShoppingAssistant(shopping_settings)
+
+
+async def _ensure_assistant():
+    """Lazy-init the shopping assistant on first call."""
+    global _assistant
+    if _assistant is not None:
+        return
+    async with _assistant_lock:
+        if _assistant is not None:
+            return
+        logger.info(json.dumps({"event": "assistant_loading"}))
+        try:
+            loop = asyncio.get_event_loop()
+            _assistant = await loop.run_in_executor(_executor, _load_assistant_sync)
+            logger.info(json.dumps({"event": "shopping_assistant_ready"}))
+        except Exception as e:
+            logger.error(json.dumps({"event": "assistant_load_error", "error": str(e)}))
+            raise HTTPException(status_code=503, detail=f"Failed to load assistant: {e}")
 
 # ─────────────────────────────────────────────────────────
 # App
@@ -181,8 +198,8 @@ async def ask_agent(
 
     **Authentication:** `X-API-Key: <your-key>`
     """
-    if _assistant is None:
-        raise HTTPException(status_code=503, detail="Shopping assistant not initialized. Check LLM API key.")
+    # Lazy-load assistant on first request (saves memory at startup)
+    await _ensure_assistant()
 
     # Rate limit keyed by first 8 chars of API key
     check_rate_limit(_key[:8])
@@ -236,7 +253,7 @@ def health():
         "checks": {
             "llm_provider": settings.llm_provider,
             "llm_model": settings.llm_model,
-            "shopping_assistant": "ready" if _assistant is not None else "not_initialized",
+            "shopping_assistant": "ready" if _assistant is not None else "lazy_pending",
             "redis": "connected" if settings.redis_url else "disabled",
         },
         "timestamp": datetime.now(timezone.utc).isoformat(),
