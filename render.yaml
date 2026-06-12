@@ -1,0 +1,31 @@
+services:
+  - type: web
+    name: ai-agent-production
+    runtime: docker
+    region: singapore
+    plan: free
+    healthCheckPath: /health
+    autoDeploy: true
+    envVars:
+      - key: ENVIRONMENT
+        value: production
+      - key: DEBUG
+        value: "false"
+      - key: LLM_PROVIDER
+        value: gemini
+      - key: LLM_MODEL
+        value: gemini-3.1-flash-lite
+      - key: GOOGLE_API_KEY
+        sync: false
+      - key: AGENT_API_KEY
+        sync: false
+      - key: JWT_SECRET
+        generateValue: true
+      - key: DAILY_BUDGET_USD
+        value: "10.0"
+      - key: RATE_LIMIT_PER_MINUTE
+        value: "10"
+      - key: EMBEDDING_MODEL
+        value: sentence-transformers/all-MiniLM-L6-v2
+      - key: RAG_TOP_K
+        value: "4"

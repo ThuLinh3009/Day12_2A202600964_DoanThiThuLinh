@@ -1,0 +1,86 @@
+{
+  "question": "Đơn hàng 1971 có được hoàn trả không?",
+  "route": {
+    "status": "ok",
+    "needs_policy": true,
+    "needs_data": true,
+    "clarification_question": null
+  },
+  "policy_result": {
+    "status": "ok",
+    "summary": "Việc đơn hàng 1971 có được hoàn trả hay không phụ thuộc vào trạng thái đơn hàng và thời hạn trả hàng cụ thể của đơn hàng đó. Bạn cần kiểm tra trạng thái đơn hàng (đã giao thành công hay chưa) và thời hạn trả hàng (eligible_for_return_until) trong hệ thống.",
+    "facts": [
+      "Đơn hàng chỉ có thể được trả khi đã ở trạng thái 'delivered' (đã giao) hoặc 'completed' (hoàn tất) và chưa vượt quá thời hạn trả hàng.",
+      "Thời hạn trả hàng mặc định là 15 ngày kể từ khi giao hàng thành công, trừ các nhóm hàng đặc thù (hàng tiêu dùng nhanh, thực phẩm, hàng tươi sống) có thời hạn ngắn hơn.",
+      "Cần kiểm tra các trường dữ liệu cụ thể của đơn hàng như 'returnable' (có được phép trả hay không) và 'eligible_for_return_until' (thời hạn trả hàng) để xác định quyền lợi chính xác."
+    ],
+    "citations": [
+      "5.1. Điều kiện chung để gửi yêu cầu",
+      "5.10. Quan hệ giữa trạng thái đơn hàng và quyền trả hàng"
+    ]
+  },
+  "data_result": {
+    "status": "ok",
+    "summary": "Đơn hàng 1971 hiện tại không thể thực hiện hoàn trả.",
+    "facts": [
+      "Đơn hàng 1971 đang trong trạng thái vận chuyển (in_transit).",
+      "can_return_now = false (Hiện tại không thể hoàn trả đơn hàng này)."
+    ],
+    "missing_fields": [],
+    "not_found_entities": []
+  },
+  "final_answer": "Answer: Đơn hàng 1971 hiện tại không thể thực hiện hoàn trả.\n\nEvidence:\n- Policy: Theo quy định, đơn hàng chỉ có thể được trả khi đã ở trạng thái \"đã giao\" (delivered) hoặc \"hoàn tất\" (completed) và chưa vượt quá thời hạn trả hàng (thông thường là 15 ngày).\n- Order data: Đơn hàng 1971 hiện đang trong trạng thái vận chuyển (in_transit), do đó hệ thống xác nhận không đủ điều kiện để thực hiện hoàn trả tại thời điểm này (can_return_now = false).",
+  "trace": [
+    {
+      "event": "start",
+      "question": "Đơn hàng 1971 có được hoàn trả không?",
+      "ts": "2026-06-09T09:07:24.978586+00:00"
+    },
+    {
+      "event": "supervisor",
+      "route": {
+        "status": "ok",
+        "needs_policy": true,
+        "needs_data": true,
+        "clarification_question": null
+      },
+      "ts": "2026-06-09T09:07:26.258712+00:00"
+    },
+    {
+      "event": "policy_worker",
+      "result": {
+        "status": "ok",
+        "summary": "Việc đơn hàng 1971 có được hoàn trả hay không phụ thuộc vào trạng thái đơn hàng và thời hạn trả hàng cụ thể của đơn hàng đó. Bạn cần kiểm tra trạng thái đơn hàng (đã giao thành công hay chưa) và thời hạn trả hàng (eligible_for_return_until) trong hệ thống.",
+        "facts": [
+          "Đơn hàng chỉ có thể được trả khi đã ở trạng thái 'delivered' (đã giao) hoặc 'completed' (hoàn tất) và chưa vượt quá thời hạn trả hàng.",
+          "Thời hạn trả hàng mặc định là 15 ngày kể từ khi giao hàng thành công, trừ các nhóm hàng đặc thù (hàng tiêu dùng nhanh, thực phẩm, hàng tươi sống) có thời hạn ngắn hơn.",
+          "Cần kiểm tra các trường dữ liệu cụ thể của đơn hàng như 'returnable' (có được phép trả hay không) và 'eligible_for_return_until' (thời hạn trả hàng) để xác định quyền lợi chính xác."
+        ],
+        "citations": [
+          "5.1. Điều kiện chung để gửi yêu cầu",
+          "5.10. Quan hệ giữa trạng thái đơn hàng và quyền trả hàng"
+        ]
+      },
+      "ts": "2026-06-09T09:07:49.961462+00:00"
+    },
+    {
+      "event": "data_worker",
+      "result": {
+        "status": "ok",
+        "summary": "Đơn hàng 1971 hiện tại không thể thực hiện hoàn trả.",
+        "facts": [
+          "Đơn hàng 1971 đang trong trạng thái vận chuyển (in_transit).",
+          "can_return_now = false (Hiện tại không thể hoàn trả đơn hàng này)."
+        ],
+        "missing_fields": [],
+        "not_found_entities": []
+      },
+      "ts": "2026-06-09T09:07:51.852451+00:00"
+    },
+    {
+      "event": "response_worker",
+      "final_answer": "Answer: Đơn hàng 1971 hiện tại không thể thực hiện hoàn trả.\n\nEvidence:\n- Policy: Theo quy định, đơn hàng chỉ có thể được trả khi đã ở trạng thái \"đã giao\" (delivered) hoặc \"hoàn tất\" (completed) và chưa vượt quá thời hạn trả hàng (thông thường là 15 ngày).\n- Order data: Đơn hàng 1971 hiện đang trong trạng thái vận chuyển (in_transit), do đó hệ thống xác nhận không đủ điều kiện để thực hiện hoàn trả tại thời điểm này (can_return_now = false).",
+      "ts": "2026-06-09T09:07:54.415480+00:00"
+    }
+  ]
+}

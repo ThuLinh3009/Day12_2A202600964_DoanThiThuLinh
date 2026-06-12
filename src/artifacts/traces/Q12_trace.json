@@ -1,0 +1,88 @@
+{
+  "question": "Đơn hàng 2058 còn trong thời gian trả hàng không?",
+  "route": {
+    "status": "ok",
+    "needs_policy": true,
+    "needs_data": true,
+    "clarification_question": null
+  },
+  "policy_result": {
+    "status": "ok",
+    "summary": "Để xác định đơn hàng 2058 còn trong thời gian trả hàng hay không, cần đối chiếu thời điểm giao hàng thành công của đơn hàng với thời hạn hỗ trợ trả hàng quy định. Thông thường, thời hạn này là 15 ngày kể từ khi đơn hàng cập nhật giao hàng thành công, trừ một số loại hàng hóa đặc thù có thời hạn ngắn hơn (3 ngày hoặc 24 giờ).",
+    "facts": [
+      "Thời hạn trả hàng mặc định là 15 ngày kể từ khi đơn hàng cập nhật giao hàng thành công.",
+      "Hàng tiêu dùng nhanh, mỹ phẩm dùng thử, thực phẩm có thời hạn trả hàng tối đa 3 ngày.",
+      "Hàng tươi sống hoặc hàng có điều kiện bảo quản đặc biệt có thời hạn trả hàng tối đa 24 giờ.",
+      "Thời hạn cụ thể có thể được ghi đè bởi các trường dữ liệu riêng của từng đơn hàng hoặc sản phẩm."
+    ],
+    "citations": [
+      "5.1. Điều kiện chung để gửi yêu cầu"
+    ]
+  },
+  "data_result": {
+    "status": "ok",
+    "summary": "Đơn hàng 2058 hiện vẫn còn trong thời gian cho phép trả hàng.",
+    "facts": [
+      "Đơn hàng 2058 đã được giao thành công vào ngày 2026-06-01.",
+      "Trạng thái hiện tại: can_return_now = true.",
+      "Thời hạn cuối cùng để trả hàng là ngày 2026-06-16."
+    ],
+    "missing_fields": [],
+    "not_found_entities": []
+  },
+  "final_answer": "Answer: Đơn hàng 2058 hiện vẫn còn trong thời gian cho phép trả hàng. Bạn có thể thực hiện yêu cầu trả hàng cho đơn hàng này chậm nhất là đến hết ngày 16/06/2026.\n\nEvidence:\n- Policy: Theo quy định, thời hạn trả hàng mặc định là 15 ngày kể từ khi đơn hàng cập nhật giao hàng thành công (trừ một số loại hàng hóa đặc thù có thời hạn ngắn hơn).\n- Order data: Đơn hàng 2058 đã được giao thành công vào ngày 01/06/2026 và hệ thống xác nhận trạng thái hiện tại vẫn cho phép trả hàng (can_return_now = true).",
+  "trace": [
+    {
+      "event": "start",
+      "question": "Đơn hàng 2058 còn trong thời gian trả hàng không?",
+      "ts": "2026-06-09T09:07:54.431054+00:00"
+    },
+    {
+      "event": "supervisor",
+      "route": {
+        "status": "ok",
+        "needs_policy": true,
+        "needs_data": true,
+        "clarification_question": null
+      },
+      "ts": "2026-06-09T09:07:55.227568+00:00"
+    },
+    {
+      "event": "policy_worker",
+      "result": {
+        "status": "ok",
+        "summary": "Để xác định đơn hàng 2058 còn trong thời gian trả hàng hay không, cần đối chiếu thời điểm giao hàng thành công của đơn hàng với thời hạn hỗ trợ trả hàng quy định. Thông thường, thời hạn này là 15 ngày kể từ khi đơn hàng cập nhật giao hàng thành công, trừ một số loại hàng hóa đặc thù có thời hạn ngắn hơn (3 ngày hoặc 24 giờ).",
+        "facts": [
+          "Thời hạn trả hàng mặc định là 15 ngày kể từ khi đơn hàng cập nhật giao hàng thành công.",
+          "Hàng tiêu dùng nhanh, mỹ phẩm dùng thử, thực phẩm có thời hạn trả hàng tối đa 3 ngày.",
+          "Hàng tươi sống hoặc hàng có điều kiện bảo quản đặc biệt có thời hạn trả hàng tối đa 24 giờ.",
+          "Thời hạn cụ thể có thể được ghi đè bởi các trường dữ liệu riêng của từng đơn hàng hoặc sản phẩm."
+        ],
+        "citations": [
+          "5.1. Điều kiện chung để gửi yêu cầu"
+        ]
+      },
+      "ts": "2026-06-09T09:08:00.196340+00:00"
+    },
+    {
+      "event": "data_worker",
+      "result": {
+        "status": "ok",
+        "summary": "Đơn hàng 2058 hiện vẫn còn trong thời gian cho phép trả hàng.",
+        "facts": [
+          "Đơn hàng 2058 đã được giao thành công vào ngày 2026-06-01.",
+          "Trạng thái hiện tại: can_return_now = true.",
+          "Thời hạn cuối cùng để trả hàng là ngày 2026-06-16."
+        ],
+        "missing_fields": [],
+        "not_found_entities": []
+      },
+      "ts": "2026-06-09T09:08:02.023918+00:00"
+    },
+    {
+      "event": "response_worker",
+      "final_answer": "Answer: Đơn hàng 2058 hiện vẫn còn trong thời gian cho phép trả hàng. Bạn có thể thực hiện yêu cầu trả hàng cho đơn hàng này chậm nhất là đến hết ngày 16/06/2026.\n\nEvidence:\n- Policy: Theo quy định, thời hạn trả hàng mặc định là 15 ngày kể từ khi đơn hàng cập nhật giao hàng thành công (trừ một số loại hàng hóa đặc thù có thời hạn ngắn hơn).\n- Order data: Đơn hàng 2058 đã được giao thành công vào ngày 01/06/2026 và hệ thống xác nhận trạng thái hiện tại vẫn cho phép trả hàng (can_return_now = true).",
+      "ts": "2026-06-09T09:08:03.494691+00:00"
+    }
+  ]
+}

@@ -1,0 +1,65 @@
+{
+  "question": "Khách có được kiểm hàng khi nhận không?",
+  "route": {
+    "status": "ok",
+    "needs_policy": true,
+    "needs_data": false,
+    "clarification_question": null
+  },
+  "policy_result": {
+    "status": "ok",
+    "summary": "Khách hàng được phép kiểm tra ngoại quan gói hàng khi nhận, nhưng không bao gồm việc dùng thử, lắp đặt hoặc sử dụng sản phẩm tại chỗ.",
+    "facts": [
+      "Khách hàng được khuyến nghị kiểm tra tình trạng thùng hàng khi nhận.",
+      "Khách hàng được phép kiểm tra ngoại quan gói hàng trước khi xác nhận nhận hàng.",
+      "Khách hàng nên quay video mở kiện đối với các sản phẩm có giá trị cao.",
+      "Nếu phát hiện vỡ, móp, thiếu phụ kiện hoặc sai sản phẩm, khách hàng cần báo ngay trên ứng dụng.",
+      "Việc dùng thử sâu, lắp đặt, kích hoạt hoặc sử dụng lâu dài không thuộc phạm vi kiểm hàng tại chỗ."
+    ],
+    "citations": [
+      "4.6. Kiểm hàng khi nhận"
+    ]
+  },
+  "data_result": {},
+  "final_answer": "Answer: Khách hàng hoàn toàn được phép kiểm tra ngoại quan gói hàng khi nhận để đảm bảo tình trạng thùng hàng nguyên vẹn, không bị móp méo hay hư hỏng trước khi xác nhận nhận hàng.\n\nTuy nhiên, quý khách lưu ý chính sách kiểm hàng không bao gồm việc dùng thử, lắp đặt hoặc sử dụng sản phẩm tại chỗ. Để đảm bảo quyền lợi tốt nhất, quý khách nên quay video quá trình mở kiện hàng, đặc biệt đối với các sản phẩm có giá trị cao. Nếu phát hiện tình trạng vỡ, móp, thiếu phụ kiện hoặc sai sản phẩm, quý khách vui lòng báo ngay trên ứng dụng để được hỗ trợ kịp thời.\n\nEvidence:\n- Policy: 4.6. Kiểm hàng khi nhận\n- Order data: Không có dữ liệu đơn hàng cụ thể được cung cấp.",
+  "trace": [
+    {
+      "event": "start",
+      "question": "Khách có được kiểm hàng khi nhận không?",
+      "ts": "2026-06-09T09:05:42.306310+00:00"
+    },
+    {
+      "event": "supervisor",
+      "route": {
+        "status": "ok",
+        "needs_policy": true,
+        "needs_data": false,
+        "clarification_question": null
+      },
+      "ts": "2026-06-09T09:05:43.226041+00:00"
+    },
+    {
+      "event": "policy_worker",
+      "result": {
+        "status": "ok",
+        "summary": "Khách hàng được phép kiểm tra ngoại quan gói hàng khi nhận, nhưng không bao gồm việc dùng thử, lắp đặt hoặc sử dụng sản phẩm tại chỗ.",
+        "facts": [
+          "Khách hàng được khuyến nghị kiểm tra tình trạng thùng hàng khi nhận.",
+          "Khách hàng được phép kiểm tra ngoại quan gói hàng trước khi xác nhận nhận hàng.",
+          "Khách hàng nên quay video mở kiện đối với các sản phẩm có giá trị cao.",
+          "Nếu phát hiện vỡ, móp, thiếu phụ kiện hoặc sai sản phẩm, khách hàng cần báo ngay trên ứng dụng.",
+          "Việc dùng thử sâu, lắp đặt, kích hoạt hoặc sử dụng lâu dài không thuộc phạm vi kiểm hàng tại chỗ."
+        ],
+        "citations": [
+          "4.6. Kiểm hàng khi nhận"
+        ]
+      },
+      "ts": "2026-06-09T09:05:47.702504+00:00"
+    },
+    {
+      "event": "response_worker",
+      "final_answer": "Answer: Khách hàng hoàn toàn được phép kiểm tra ngoại quan gói hàng khi nhận để đảm bảo tình trạng thùng hàng nguyên vẹn, không bị móp méo hay hư hỏng trước khi xác nhận nhận hàng.\n\nTuy nhiên, quý khách lưu ý chính sách kiểm hàng không bao gồm việc dùng thử, lắp đặt hoặc sử dụng sản phẩm tại chỗ. Để đảm bảo quyền lợi tốt nhất, quý khách nên quay video quá trình mở kiện hàng, đặc biệt đối với các sản phẩm có giá trị cao. Nếu phát hiện tình trạng vỡ, móp, thiếu phụ kiện hoặc sai sản phẩm, quý khách vui lòng báo ngay trên ứng dụng để được hỗ trợ kịp thời.\n\nEvidence:\n- Policy: 4.6. Kiểm hàng khi nhận\n- Order data: Không có dữ liệu đơn hàng cụ thể được cung cấp.",
+      "ts": "2026-06-09T09:05:49.131880+00:00"
+    }
+  ]
+}

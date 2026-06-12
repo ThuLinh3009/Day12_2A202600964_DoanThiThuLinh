@@ -1,0 +1,61 @@
+{
+  "question": "Đơn hàng 1971 bao giờ được giao?",
+  "route": {
+    "status": "ok",
+    "needs_policy": false,
+    "needs_data": true,
+    "clarification_question": null
+  },
+  "policy_result": {},
+  "data_result": {
+    "status": "ok",
+    "summary": "Đơn hàng 1971 dự kiến sẽ được giao vào ngày 09/06/2026.",
+    "facts": [
+      "Đơn hàng 1971 đang trong trạng thái vận chuyển (in_transit)",
+      "Thời gian giao hàng dự kiến (estimated_delivery): 2026-06-09",
+      "Đơn vị vận chuyển: SPX Express",
+      "Vị trí hiện tại: Destination Delivery Station"
+    ],
+    "missing_fields": [],
+    "not_found_entities": []
+  },
+  "final_answer": "Answer: Đơn hàng 1971 của bạn hiện đang trong quá trình vận chuyển và dự kiến sẽ được giao đến tay bạn vào ngày 09/06/2026. Hiện tại, đơn hàng đang ở trạm giao hàng cuối cùng (Destination Delivery Station) và được vận chuyển bởi đơn vị SPX Express.\n\nEvidence:\n- Policy: Không có chính sách cụ thể được cung cấp.\n- Order data: Đơn hàng 1971 đang ở trạng thái \"in_transit\", thời gian giao hàng dự kiến là 2026-06-09, đơn vị vận chuyển là SPX Express, vị trí hiện tại là Destination Delivery Station.",
+  "trace": [
+    {
+      "event": "start",
+      "question": "Đơn hàng 1971 bao giờ được giao?",
+      "ts": "2026-06-09T09:06:23.025393+00:00"
+    },
+    {
+      "event": "supervisor",
+      "route": {
+        "status": "ok",
+        "needs_policy": false,
+        "needs_data": true,
+        "clarification_question": null
+      },
+      "ts": "2026-06-09T09:06:23.730688+00:00"
+    },
+    {
+      "event": "data_worker",
+      "result": {
+        "status": "ok",
+        "summary": "Đơn hàng 1971 dự kiến sẽ được giao vào ngày 09/06/2026.",
+        "facts": [
+          "Đơn hàng 1971 đang trong trạng thái vận chuyển (in_transit)",
+          "Thời gian giao hàng dự kiến (estimated_delivery): 2026-06-09",
+          "Đơn vị vận chuyển: SPX Express",
+          "Vị trí hiện tại: Destination Delivery Station"
+        ],
+        "missing_fields": [],
+        "not_found_entities": []
+      },
+      "ts": "2026-06-09T09:06:34.915899+00:00"
+    },
+    {
+      "event": "response_worker",
+      "final_answer": "Answer: Đơn hàng 1971 của bạn hiện đang trong quá trình vận chuyển và dự kiến sẽ được giao đến tay bạn vào ngày 09/06/2026. Hiện tại, đơn hàng đang ở trạm giao hàng cuối cùng (Destination Delivery Station) và được vận chuyển bởi đơn vị SPX Express.\n\nEvidence:\n- Policy: Không có chính sách cụ thể được cung cấp.\n- Order data: Đơn hàng 1971 đang ở trạng thái \"in_transit\", thời gian giao hàng dự kiến là 2026-06-09, đơn vị vận chuyển là SPX Express, vị trí hiện tại là Destination Delivery Station.",
+      "ts": "2026-06-09T09:06:36.615554+00:00"
+    }
+  ]
+}

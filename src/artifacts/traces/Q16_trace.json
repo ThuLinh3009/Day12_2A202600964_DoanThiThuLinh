@@ -1,0 +1,34 @@
+{
+  "question": "Đơn hàng của tôi có được hoàn trả không?",
+  "route": {
+    "status": "clarification_needed",
+    "needs_policy": false,
+    "needs_data": false,
+    "clarification_question": "Bạn muốn hỏi về đơn hàng nào? Vui lòng cung cấp order_id."
+  },
+  "policy_result": {},
+  "data_result": {},
+  "final_answer": "Status: clarification_needed\nQuestion: Bạn muốn hỏi về đơn hàng nào? Vui lòng cung cấp order_id.",
+  "trace": [
+    {
+      "event": "start",
+      "question": "Đơn hàng của tôi có được hoàn trả không?",
+      "ts": "2026-06-09T09:08:56.246596+00:00"
+    },
+    {
+      "event": "supervisor",
+      "route": {
+        "status": "clarification_needed",
+        "needs_policy": false,
+        "needs_data": false,
+        "clarification_question": "Bạn muốn hỏi về đơn hàng nào? Vui lòng cung cấp order_id."
+      },
+      "ts": "2026-06-09T09:08:57.290917+00:00"
+    },
+    {
+      "event": "response_worker",
+      "final_answer": "Status: clarification_needed\nQuestion: Bạn muốn hỏi về đơn hàng nào? Vui lòng cung cấp order_id.",
+      "ts": "2026-06-09T09:08:57.291932+00:00"
+    }
+  ]
+}

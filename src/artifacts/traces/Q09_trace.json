@@ -1,0 +1,61 @@
+{
+  "question": "Khách hàng C001 thuộc hạng gì và còn quota voucher bao nhiêu?",
+  "route": {
+    "status": "ok",
+    "needs_policy": false,
+    "needs_data": true,
+    "clarification_question": null
+  },
+  "policy_result": {},
+  "data_result": {
+    "status": "ok",
+    "summary": "Khách hàng C001 (Nguyen Thu Anh) thuộc hạng Gold và còn lại 6 quota voucher trong tháng này.",
+    "facts": [
+      "Khách hàng C001 thuộc hạng Gold",
+      "Hạn mức voucher tối đa mỗi tháng là 10",
+      "Số lượng voucher đã sử dụng trong tháng này là 4",
+      "Số lượng voucher còn lại trong tháng này là 6"
+    ],
+    "missing_fields": [],
+    "not_found_entities": []
+  },
+  "final_answer": "Answer: Khách hàng C001 (Nguyen Thu Anh) hiện đang thuộc hạng Gold và còn lại 6 quota voucher để sử dụng trong tháng này.\n\nEvidence:\n- Policy: Hạn mức voucher tối đa mỗi tháng là 10.\n- Order data: Khách hàng đã sử dụng 4 voucher trong tháng này, dẫn đến số lượng còn lại là 6.",
+  "trace": [
+    {
+      "event": "start",
+      "question": "Khách hàng C001 thuộc hạng gì và còn quota voucher bao nhiêu?",
+      "ts": "2026-06-09T09:07:07.709407+00:00"
+    },
+    {
+      "event": "supervisor",
+      "route": {
+        "status": "ok",
+        "needs_policy": false,
+        "needs_data": true,
+        "clarification_question": null
+      },
+      "ts": "2026-06-09T09:07:17.949375+00:00"
+    },
+    {
+      "event": "data_worker",
+      "result": {
+        "status": "ok",
+        "summary": "Khách hàng C001 (Nguyen Thu Anh) thuộc hạng Gold và còn lại 6 quota voucher trong tháng này.",
+        "facts": [
+          "Khách hàng C001 thuộc hạng Gold",
+          "Hạn mức voucher tối đa mỗi tháng là 10",
+          "Số lượng voucher đã sử dụng trong tháng này là 4",
+          "Số lượng voucher còn lại trong tháng này là 6"
+        ],
+        "missing_fields": [],
+        "not_found_entities": []
+      },
+      "ts": "2026-06-09T09:07:19.618428+00:00"
+    },
+    {
+      "event": "response_worker",
+      "final_answer": "Answer: Khách hàng C001 (Nguyen Thu Anh) hiện đang thuộc hạng Gold và còn lại 6 quota voucher để sử dụng trong tháng này.\n\nEvidence:\n- Policy: Hạn mức voucher tối đa mỗi tháng là 10.\n- Order data: Khách hàng đã sử dụng 4 voucher trong tháng này, dẫn đến số lượng còn lại là 6.",
+      "ts": "2026-06-09T09:07:20.493966+00:00"
+    }
+  ]
+}

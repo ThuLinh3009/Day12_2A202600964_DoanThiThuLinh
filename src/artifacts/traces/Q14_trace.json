@@ -1,0 +1,92 @@
+{
+  "question": "Đơn hàng 1971 đang giao thì nên trả hàng hay từ chối nhận?",
+  "route": {
+    "status": "ok",
+    "needs_policy": true,
+    "needs_data": true,
+    "clarification_question": null
+  },
+  "policy_result": {
+    "status": "ok",
+    "summary": "Chính sách không khuyến khích việc từ chối nhận hàng không có lý do chính đáng. Nếu bạn từ chối nhận hàng, đơn hàng sẽ được ghi nhận là giao hàng không thành công và có thể bị chuyển hoàn về kho hoặc hủy đơn tùy theo trạng thái thanh toán. Việc từ chối nhận hàng không lý do có thể ảnh hưởng đến uy tín tài khoản và các quyền lợi ưu đãi sau này.",
+    "facts": [
+      "Việc từ chối nhận hàng không có lý do phù hợp được phân loại là giao hàng không thành công.",
+      "Đơn hàng bị từ chối nhận sẽ được xử lý theo quy trình: giao lại, chuyển hoàn về kho hoặc hủy đơn.",
+      "Hệ thống có quy định chống gian lận đối với các hành vi hủy đơn hoặc từ chối nhận hàng lặp lại bất thường.",
+      "Nên cân nhắc nhận hàng và thực hiện quy trình đổi trả chính thức nếu sản phẩm có vấn đề, thay vì từ chối nhận ngay tại thời điểm giao."
+    ],
+    "citations": [
+      "4.7. Giao hàng không thành công",
+      "8. Quy định chống gian lận"
+    ]
+  },
+  "data_result": {
+    "status": "ok",
+    "summary": "Đơn hàng 1971 hiện đang trong quá trình vận chuyển (in_transit) và chưa thể thực hiện hoàn trả ngay lúc này (can_return_now = false).",
+    "facts": [
+      "Đơn hàng 1971 đang trong trạng thái vận chuyển (in_transit).",
+      "Dự kiến giao hàng vào ngày 2026-06-09.",
+      "Hiện tại đơn hàng chưa thể thực hiện hoàn trả (can_return_now = false).",
+      "Vì đơn hàng chưa được giao thành công, bạn không thể 'trả hàng' (quy trình hoàn trả chỉ áp dụng sau khi đã nhận hàng). Nếu bạn không muốn nhận đơn hàng này, bạn có thể từ chối nhận hàng khi shipper liên hệ giao."
+    ],
+    "missing_fields": [],
+    "not_found_entities": []
+  },
+  "final_answer": "Trường hợp thành công:\n\nAnswer: Đối với đơn hàng 1971, hiện tại bạn chưa thể thực hiện quy trình \"trả hàng\" vì đơn hàng vẫn đang trong quá trình vận chuyển (dự kiến giao ngày 2026-06-09). Nếu bạn không muốn nhận đơn hàng này, bạn có thể từ chối nhận khi shipper liên hệ. Tuy nhiên, chúng tôi khuyến khích bạn nên nhận hàng và thực hiện quy trình đổi trả chính thức sau đó (nếu sản phẩm có vấn đề), vì việc từ chối nhận hàng không có lý do chính đáng có thể ảnh hưởng đến uy tín tài khoản và các quyền lợi ưu đãi của bạn trong tương lai.\n\nEvidence:\n- Policy: Việc từ chối nhận hàng không có lý do phù hợp được phân loại là giao hàng không thành công và có thể ảnh hưởng đến uy tín tài khoản (theo quy định 4.7 và 8).\n- Order data: Đơn hàng 1971 đang ở trạng thái \"in_transit\" (đang vận chuyển), chưa thể thực hiện hoàn trả (can_return_now = false) và dự kiến giao vào ngày 2026-06-09.",
+  "trace": [
+    {
+      "event": "start",
+      "question": "Đơn hàng 1971 đang giao thì nên trả hàng hay từ chối nhận?",
+      "ts": "2026-06-09T09:08:10.426472+00:00"
+    },
+    {
+      "event": "supervisor",
+      "route": {
+        "status": "ok",
+        "needs_policy": true,
+        "needs_data": true,
+        "clarification_question": null
+      },
+      "ts": "2026-06-09T09:08:16.269519+00:00"
+    },
+    {
+      "event": "policy_worker",
+      "result": {
+        "status": "ok",
+        "summary": "Chính sách không khuyến khích việc từ chối nhận hàng không có lý do chính đáng. Nếu bạn từ chối nhận hàng, đơn hàng sẽ được ghi nhận là giao hàng không thành công và có thể bị chuyển hoàn về kho hoặc hủy đơn tùy theo trạng thái thanh toán. Việc từ chối nhận hàng không lý do có thể ảnh hưởng đến uy tín tài khoản và các quyền lợi ưu đãi sau này.",
+        "facts": [
+          "Việc từ chối nhận hàng không có lý do phù hợp được phân loại là giao hàng không thành công.",
+          "Đơn hàng bị từ chối nhận sẽ được xử lý theo quy trình: giao lại, chuyển hoàn về kho hoặc hủy đơn.",
+          "Hệ thống có quy định chống gian lận đối với các hành vi hủy đơn hoặc từ chối nhận hàng lặp lại bất thường.",
+          "Nên cân nhắc nhận hàng và thực hiện quy trình đổi trả chính thức nếu sản phẩm có vấn đề, thay vì từ chối nhận ngay tại thời điểm giao."
+        ],
+        "citations": [
+          "4.7. Giao hàng không thành công",
+          "8. Quy định chống gian lận"
+        ]
+      },
+      "ts": "2026-06-09T09:08:41.226845+00:00"
+    },
+    {
+      "event": "data_worker",
+      "result": {
+        "status": "ok",
+        "summary": "Đơn hàng 1971 hiện đang trong quá trình vận chuyển (in_transit) và chưa thể thực hiện hoàn trả ngay lúc này (can_return_now = false).",
+        "facts": [
+          "Đơn hàng 1971 đang trong trạng thái vận chuyển (in_transit).",
+          "Dự kiến giao hàng vào ngày 2026-06-09.",
+          "Hiện tại đơn hàng chưa thể thực hiện hoàn trả (can_return_now = false).",
+          "Vì đơn hàng chưa được giao thành công, bạn không thể 'trả hàng' (quy trình hoàn trả chỉ áp dụng sau khi đã nhận hàng). Nếu bạn không muốn nhận đơn hàng này, bạn có thể từ chối nhận hàng khi shipper liên hệ giao."
+        ],
+        "missing_fields": [],
+        "not_found_entities": []
+      },
+      "ts": "2026-06-09T09:08:52.992768+00:00"
+    },
+    {
+      "event": "response_worker",
+      "final_answer": "Trường hợp thành công:\n\nAnswer: Đối với đơn hàng 1971, hiện tại bạn chưa thể thực hiện quy trình \"trả hàng\" vì đơn hàng vẫn đang trong quá trình vận chuyển (dự kiến giao ngày 2026-06-09). Nếu bạn không muốn nhận đơn hàng này, bạn có thể từ chối nhận khi shipper liên hệ. Tuy nhiên, chúng tôi khuyến khích bạn nên nhận hàng và thực hiện quy trình đổi trả chính thức sau đó (nếu sản phẩm có vấn đề), vì việc từ chối nhận hàng không có lý do chính đáng có thể ảnh hưởng đến uy tín tài khoản và các quyền lợi ưu đãi của bạn trong tương lai.\n\nEvidence:\n- Policy: Việc từ chối nhận hàng không có lý do phù hợp được phân loại là giao hàng không thành công và có thể ảnh hưởng đến uy tín tài khoản (theo quy định 4.7 và 8).\n- Order data: Đơn hàng 1971 đang ở trạng thái \"in_transit\" (đang vận chuyển), chưa thể thực hiện hoàn trả (can_return_now = false) và dự kiến giao vào ngày 2026-06-09.",
+      "ts": "2026-06-09T09:08:54.774315+00:00"
+    }
+  ]
+}

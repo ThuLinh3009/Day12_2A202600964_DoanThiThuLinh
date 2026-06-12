@@ -1,0 +1,65 @@
+{
+  "question": "Voucher có được hoàn lại khi hủy đơn không?",
+  "route": {
+    "status": "ok",
+    "needs_policy": true,
+    "needs_data": false,
+    "clarification_question": null
+  },
+  "policy_result": {
+    "status": "ok",
+    "summary": "Voucher có thể được hoàn lại khi đơn hàng bị hủy nếu đáp ứng được các điều kiện về hiệu lực và giới hạn sử dụng. Tuy nhiên, một số loại voucher đặc biệt hoặc đã hết lượt sử dụng sẽ không được hoàn lại.",
+    "facts": [
+      "Voucher được hoàn lại nếu còn hiệu lực và chưa vượt quá giới hạn sử dụng.",
+      "Điều kiện bắt buộc là toàn bộ đơn hàng hoặc toàn bộ phần sử dụng voucher phải bị hủy.",
+      "Các loại voucher không được hoàn bao gồm: voucher số lượng giới hạn đã hết lượt, voucher livestream/video/flash campaign đã hết hiệu lực, và voucher sự kiện đặc biệt có quy định không hoàn.",
+      "Nền tảng có quyền thu hồi voucher nếu phát hiện hành vi gian lận hoặc lạm dụng chính sách."
+    ],
+    "citations": [
+      "6.5. Hoàn lại voucher khi đơn bị hủy",
+      "6.7. Thu hồi voucher và chống gian lận"
+    ]
+  },
+  "data_result": {},
+  "final_answer": "Trường hợp thành công:\n\nAnswer: Voucher của bạn có thể được hoàn lại khi hủy đơn hàng nếu đáp ứng đủ các điều kiện về hiệu lực và giới hạn sử dụng. Cụ thể:\n- Voucher sẽ được hoàn lại nếu đơn hàng bị hủy hoàn toàn và voucher vẫn còn trong thời hạn sử dụng cũng như chưa vượt quá giới hạn lượt dùng.\n- Tuy nhiên, voucher sẽ **không được hoàn lại** trong các trường hợp: voucher đã hết lượt sử dụng, voucher từ các chương trình livestream/flash sale đã hết hiệu lực, hoặc các voucher sự kiện đặc biệt có quy định không hoàn.\n- Lưu ý: Nền tảng có quyền thu hồi voucher nếu phát hiện hành vi gian lận hoặc lạm dụng chính sách.\n\nEvidence:\n- Policy: 6.5. Hoàn lại voucher khi đơn bị hủy; 6.7. Thu hồi voucher và chống gian lận\n- Order data: Không có dữ liệu đơn hàng cụ thể được cung cấp để kiểm tra trạng thái hoàn voucher cho đơn hàng của bạn.",
+  "trace": [
+    {
+      "event": "start",
+      "question": "Voucher có được hoàn lại khi hủy đơn không?",
+      "ts": "2026-06-09T09:05:49.184997+00:00"
+    },
+    {
+      "event": "supervisor",
+      "route": {
+        "status": "ok",
+        "needs_policy": true,
+        "needs_data": false,
+        "clarification_question": null
+      },
+      "ts": "2026-06-09T09:05:50.274279+00:00"
+    },
+    {
+      "event": "policy_worker",
+      "result": {
+        "status": "ok",
+        "summary": "Voucher có thể được hoàn lại khi đơn hàng bị hủy nếu đáp ứng được các điều kiện về hiệu lực và giới hạn sử dụng. Tuy nhiên, một số loại voucher đặc biệt hoặc đã hết lượt sử dụng sẽ không được hoàn lại.",
+        "facts": [
+          "Voucher được hoàn lại nếu còn hiệu lực và chưa vượt quá giới hạn sử dụng.",
+          "Điều kiện bắt buộc là toàn bộ đơn hàng hoặc toàn bộ phần sử dụng voucher phải bị hủy.",
+          "Các loại voucher không được hoàn bao gồm: voucher số lượng giới hạn đã hết lượt, voucher livestream/video/flash campaign đã hết hiệu lực, và voucher sự kiện đặc biệt có quy định không hoàn.",
+          "Nền tảng có quyền thu hồi voucher nếu phát hiện hành vi gian lận hoặc lạm dụng chính sách."
+        ],
+        "citations": [
+          "6.5. Hoàn lại voucher khi đơn bị hủy",
+          "6.7. Thu hồi voucher và chống gian lận"
+        ]
+      },
+      "ts": "2026-06-09T09:05:53.718720+00:00"
+    },
+    {
+      "event": "response_worker",
+      "final_answer": "Trường hợp thành công:\n\nAnswer: Voucher của bạn có thể được hoàn lại khi hủy đơn hàng nếu đáp ứng đủ các điều kiện về hiệu lực và giới hạn sử dụng. Cụ thể:\n- Voucher sẽ được hoàn lại nếu đơn hàng bị hủy hoàn toàn và voucher vẫn còn trong thời hạn sử dụng cũng như chưa vượt quá giới hạn lượt dùng.\n- Tuy nhiên, voucher sẽ **không được hoàn lại** trong các trường hợp: voucher đã hết lượt sử dụng, voucher từ các chương trình livestream/flash sale đã hết hiệu lực, hoặc các voucher sự kiện đặc biệt có quy định không hoàn.\n- Lưu ý: Nền tảng có quyền thu hồi voucher nếu phát hiện hành vi gian lận hoặc lạm dụng chính sách.\n\nEvidence:\n- Policy: 6.5. Hoàn lại voucher khi đơn bị hủy; 6.7. Thu hồi voucher và chống gian lận\n- Order data: Không có dữ liệu đơn hàng cụ thể được cung cấp để kiểm tra trạng thái hoàn voucher cho đơn hàng của bạn.",
+      "ts": "2026-06-09T09:05:55.382014+00:00"
+    }
+  ]
+}

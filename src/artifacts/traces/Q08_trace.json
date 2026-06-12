@@ -1,0 +1,63 @@
+{
+  "question": "Voucher của khách hàng C001 còn những mã nào dùng được?",
+  "route": {
+    "status": "ok",
+    "needs_policy": false,
+    "needs_data": true,
+    "clarification_question": null
+  },
+  "policy_result": {},
+  "data_result": {
+    "status": "ok",
+    "summary": "Khách hàng C001 hiện có 1 voucher đang ở trạng thái hoạt động (active) và có thể sử dụng được.",
+    "facts": [
+      "Voucher có mã 'C001-BDAY-0626' đang ở trạng thái 'active'.",
+      "Voucher này có giá trị giảm 50,000 cho đơn hàng tối thiểu 399,000.",
+      "Voucher còn 1 lượt sử dụng.",
+      "Hạn sử dụng của voucher là đến ngày 2026-06-30T23:59.",
+      "Các voucher khác của khách hàng (SHO-C001-01, PLA-C001-03, PLAT-FS-0626-C001) đã ở trạng thái 'used' và voucher SHO-C001-02 đã 'expired'."
+    ],
+    "missing_fields": [],
+    "not_found_entities": []
+  },
+  "final_answer": "Answer: Hiện tại, khách hàng C001 chỉ còn duy nhất 1 mã voucher có thể sử dụng là **C001-BDAY-0626**.\n\nThông tin chi tiết về voucher này:\n- **Ưu đãi:** Giảm 50,000 VNĐ cho đơn hàng tối thiểu 399,000 VNĐ.\n- **Số lượt sử dụng còn lại:** 1 lượt.\n- **Hạn sử dụng:** Đến hết ngày 30/06/2026.\n\nCác mã voucher khác của khách hàng (SHO-C001-01, PLA-C001-03, PLAT-FS-0626-C001) đã được sử dụng (used) và mã SHO-C001-02 đã hết hạn (expired).\n\nEvidence:\n- Policy: Không có chính sách bổ sung được cung cấp.\n- Order data: Dữ liệu từ Data Worker xác nhận trạng thái 'active' của mã C001-BDAY-0626 và trạng thái 'used'/'expired' của các mã còn lại.",
+  "trace": [
+    {
+      "event": "start",
+      "question": "Voucher của khách hàng C001 còn những mã nào dùng được?",
+      "ts": "2026-06-09T09:06:52.089953+00:00"
+    },
+    {
+      "event": "supervisor",
+      "route": {
+        "status": "ok",
+        "needs_policy": false,
+        "needs_data": true,
+        "clarification_question": null
+      },
+      "ts": "2026-06-09T09:06:53.291084+00:00"
+    },
+    {
+      "event": "data_worker",
+      "result": {
+        "status": "ok",
+        "summary": "Khách hàng C001 hiện có 1 voucher đang ở trạng thái hoạt động (active) và có thể sử dụng được.",
+        "facts": [
+          "Voucher có mã 'C001-BDAY-0626' đang ở trạng thái 'active'.",
+          "Voucher này có giá trị giảm 50,000 cho đơn hàng tối thiểu 399,000.",
+          "Voucher còn 1 lượt sử dụng.",
+          "Hạn sử dụng của voucher là đến ngày 2026-06-30T23:59.",
+          "Các voucher khác của khách hàng (SHO-C001-01, PLA-C001-03, PLAT-FS-0626-C001) đã ở trạng thái 'used' và voucher SHO-C001-02 đã 'expired'."
+        ],
+        "missing_fields": [],
+        "not_found_entities": []
+      },
+      "ts": "2026-06-09T09:07:05.796610+00:00"
+    },
+    {
+      "event": "response_worker",
+      "final_answer": "Answer: Hiện tại, khách hàng C001 chỉ còn duy nhất 1 mã voucher có thể sử dụng là **C001-BDAY-0626**.\n\nThông tin chi tiết về voucher này:\n- **Ưu đãi:** Giảm 50,000 VNĐ cho đơn hàng tối thiểu 399,000 VNĐ.\n- **Số lượt sử dụng còn lại:** 1 lượt.\n- **Hạn sử dụng:** Đến hết ngày 30/06/2026.\n\nCác mã voucher khác của khách hàng (SHO-C001-01, PLA-C001-03, PLAT-FS-0626-C001) đã được sử dụng (used) và mã SHO-C001-02 đã hết hạn (expired).\n\nEvidence:\n- Policy: Không có chính sách bổ sung được cung cấp.\n- Order data: Dữ liệu từ Data Worker xác nhận trạng thái 'active' của mã C001-BDAY-0626 và trạng thái 'used'/'expired' của các mã còn lại.",
+      "ts": "2026-06-09T09:07:07.706036+00:00"
+    }
+  ]
+}

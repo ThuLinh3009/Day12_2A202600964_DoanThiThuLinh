@@ -1,0 +1,55 @@
+{
+  "question": "Kiểm tra đơn hàng 9999 giúp tôi",
+  "route": {
+    "status": "ok",
+    "needs_policy": false,
+    "needs_data": true,
+    "clarification_question": null
+  },
+  "policy_result": {},
+  "data_result": {
+    "status": "not_found",
+    "summary": "Không tìm thấy thông tin cho đơn hàng 9999.",
+    "facts": [],
+    "missing_fields": [],
+    "not_found_entities": [
+      "order_id: 9999"
+    ]
+  },
+  "final_answer": "Status: not_found\nMessage: Rất tiếc, hệ thống không tìm thấy thông tin cho đơn hàng có mã số 9999. Vui lòng kiểm tra lại mã đơn hàng và thử lại.",
+  "trace": [
+    {
+      "event": "start",
+      "question": "Kiểm tra đơn hàng 9999 giúp tôi",
+      "ts": "2026-06-09T09:08:57.293917+00:00"
+    },
+    {
+      "event": "supervisor",
+      "route": {
+        "status": "ok",
+        "needs_policy": false,
+        "needs_data": true,
+        "clarification_question": null
+      },
+      "ts": "2026-06-09T09:08:58.427293+00:00"
+    },
+    {
+      "event": "data_worker",
+      "result": {
+        "status": "not_found",
+        "summary": "Không tìm thấy thông tin cho đơn hàng 9999.",
+        "facts": [],
+        "missing_fields": [],
+        "not_found_entities": [
+          "order_id: 9999"
+        ]
+      },
+      "ts": "2026-06-09T09:09:00.337153+00:00"
+    },
+    {
+      "event": "response_worker",
+      "final_answer": "Status: not_found\nMessage: Rất tiếc, hệ thống không tìm thấy thông tin cho đơn hàng có mã số 9999. Vui lòng kiểm tra lại mã đơn hàng và thử lại.",
+      "ts": "2026-06-09T09:09:01.731042+00:00"
+    }
+  ]
+}

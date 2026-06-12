@@ -1,0 +1,69 @@
+{
+  "question": "Chính sách hoàn trả hàng ra sao?",
+  "route": {
+    "status": "ok",
+    "needs_policy": true,
+    "needs_data": false,
+    "clarification_question": null
+  },
+  "policy_result": {
+    "status": "ok",
+    "summary": "Khách hàng có thể yêu cầu trả hàng/hoàn tiền nếu có căn cứ hợp lý trong thời hạn quy định. Quá trình này yêu cầu cung cấp đầy đủ bằng chứng (ảnh/video) và tiền hoàn sẽ được trả về qua các phương thức thanh toán phù hợp.",
+    "facts": [
+      "Thời hạn hoàn trả: tối đa 15 ngày (hàng thông thường), 3 ngày (hàng tiêu dùng nhanh/mỹ phẩm), hoặc 24 giờ (hàng tươi sống).",
+      "Khách hàng cần cung cấp bằng chứng như ảnh chụp kiện hàng, sản phẩm lỗi, video mở kiện và mô tả vấn đề.",
+      "Tiền hoàn có thể được trả về ví nội bộ, tài khoản ngân hàng, thẻ thanh toán hoặc phương thức thanh toán gốc.",
+      "Voucher đã sử dụng có thể được hoàn lại hoặc cấp mã bù tùy theo điều kiện của từng chiến dịch."
+    ],
+    "citations": [
+      "5.1. Điều kiện chung để gửi yêu cầu",
+      "5.4. Bằng chứng cần cung cấp",
+      "5.9. Hoàn tiền",
+      "6.6. Voucher sau trả hàng / hoàn tiền"
+    ]
+  },
+  "data_result": {},
+  "final_answer": "Trường hợp thành công:\n\nAnswer: Bạn có thể yêu cầu trả hàng và hoàn tiền nếu sản phẩm gặp lỗi hoặc có căn cứ hợp lý. Thời hạn hoàn trả phụ thuộc vào loại hàng hóa: 15 ngày đối với hàng thông thường, 3 ngày đối với hàng tiêu dùng nhanh/mỹ phẩm và 24 giờ đối với hàng tươi sống. Để thực hiện, bạn cần cung cấp bằng chứng gồm ảnh chụp kiện hàng, sản phẩm lỗi và video mở kiện. Tiền hoàn sẽ được chuyển lại qua phương thức thanh toán gốc hoặc các kênh thanh toán phù hợp, đồng thời các voucher đã sử dụng có thể được hoàn lại tùy theo điều kiện cụ thể.\n\nEvidence:\n- Policy: \n    - Thời hạn hoàn trả: 15 ngày (hàng thường), 3 ngày (hàng tiêu dùng/mỹ phẩm), 24 giờ (hàng tươi sống).\n    - Yêu cầu bằng chứng: Ảnh chụp kiện hàng, sản phẩm lỗi, video mở kiện.\n    - Phương thức hoàn tiền: Ví nội bộ, tài khoản ngân hàng, thẻ thanh toán hoặc phương thức gốc.\n    - Voucher: Có thể được hoàn hoặc cấp mã bù tùy chiến dịch.\n- Order data: Không có dữ liệu đơn hàng cụ thể được cung cấp để tra cứu trạng thái đơn hàng của bạn.",
+  "trace": [
+    {
+      "event": "start",
+      "question": "Chính sách hoàn trả hàng ra sao?",
+      "ts": "2026-06-09T09:05:31.184287+00:00"
+    },
+    {
+      "event": "supervisor",
+      "route": {
+        "status": "ok",
+        "needs_policy": true,
+        "needs_data": false,
+        "clarification_question": null
+      },
+      "ts": "2026-06-09T09:05:32.145770+00:00"
+    },
+    {
+      "event": "policy_worker",
+      "result": {
+        "status": "ok",
+        "summary": "Khách hàng có thể yêu cầu trả hàng/hoàn tiền nếu có căn cứ hợp lý trong thời hạn quy định. Quá trình này yêu cầu cung cấp đầy đủ bằng chứng (ảnh/video) và tiền hoàn sẽ được trả về qua các phương thức thanh toán phù hợp.",
+        "facts": [
+          "Thời hạn hoàn trả: tối đa 15 ngày (hàng thông thường), 3 ngày (hàng tiêu dùng nhanh/mỹ phẩm), hoặc 24 giờ (hàng tươi sống).",
+          "Khách hàng cần cung cấp bằng chứng như ảnh chụp kiện hàng, sản phẩm lỗi, video mở kiện và mô tả vấn đề.",
+          "Tiền hoàn có thể được trả về ví nội bộ, tài khoản ngân hàng, thẻ thanh toán hoặc phương thức thanh toán gốc.",
+          "Voucher đã sử dụng có thể được hoàn lại hoặc cấp mã bù tùy theo điều kiện của từng chiến dịch."
+        ],
+        "citations": [
+          "5.1. Điều kiện chung để gửi yêu cầu",
+          "5.4. Bằng chứng cần cung cấp",
+          "5.9. Hoàn tiền",
+          "6.6. Voucher sau trả hàng / hoàn tiền"
+        ]
+      },
+      "ts": "2026-06-09T09:05:34.797636+00:00"
+    },
+    {
+      "event": "response_worker",
+      "final_answer": "Trường hợp thành công:\n\nAnswer: Bạn có thể yêu cầu trả hàng và hoàn tiền nếu sản phẩm gặp lỗi hoặc có căn cứ hợp lý. Thời hạn hoàn trả phụ thuộc vào loại hàng hóa: 15 ngày đối với hàng thông thường, 3 ngày đối với hàng tiêu dùng nhanh/mỹ phẩm và 24 giờ đối với hàng tươi sống. Để thực hiện, bạn cần cung cấp bằng chứng gồm ảnh chụp kiện hàng, sản phẩm lỗi và video mở kiện. Tiền hoàn sẽ được chuyển lại qua phương thức thanh toán gốc hoặc các kênh thanh toán phù hợp, đồng thời các voucher đã sử dụng có thể được hoàn lại tùy theo điều kiện cụ thể.\n\nEvidence:\n- Policy: \n    - Thời hạn hoàn trả: 15 ngày (hàng thường), 3 ngày (hàng tiêu dùng/mỹ phẩm), 24 giờ (hàng tươi sống).\n    - Yêu cầu bằng chứng: Ảnh chụp kiện hàng, sản phẩm lỗi, video mở kiện.\n    - Phương thức hoàn tiền: Ví nội bộ, tài khoản ngân hàng, thẻ thanh toán hoặc phương thức gốc.\n    - Voucher: Có thể được hoàn hoặc cấp mã bù tùy chiến dịch.\n- Order data: Không có dữ liệu đơn hàng cụ thể được cung cấp để tra cứu trạng thái đơn hàng của bạn.",
+      "ts": "2026-06-09T09:05:36.577752+00:00"
+    }
+  ]
+}

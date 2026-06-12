@@ -1,0 +1,88 @@
+{
+  "question": "Đơn hàng 2058 có liên quan gì đến cửa sổ trả hàng 15 ngày trong policy không?",
+  "route": {
+    "status": "ok",
+    "needs_policy": true,
+    "needs_data": true,
+    "clarification_question": null
+  },
+  "policy_result": {
+    "status": "ok",
+    "summary": "Theo chính sách, thời hạn trả hàng mặc định là 15 ngày kể từ khi đơn hàng được cập nhật giao hàng thành công đối với đa số ngành hàng thông thường. Tuy nhiên, thời hạn này có thể thay đổi tùy thuộc vào loại sản phẩm hoặc các trường dữ liệu cụ thể của đơn hàng (như `return_window_days`, `returnable`, hoặc `eligible_for_return_until`).",
+    "facts": [
+      "Thời hạn trả hàng mặc định cho hàng thông thường là 15 ngày kể từ khi giao hàng thành công.",
+      "Một số loại hàng hóa đặc thù (hàng tiêu dùng nhanh, thực phẩm, hàng tươi sống) có thời hạn trả hàng ngắn hơn (3 ngày hoặc 24 giờ).",
+      "Thời hạn trả hàng cụ thể của đơn hàng 2058 có thể được ghi đè bởi các trường dữ liệu sản phẩm hoặc đơn hàng riêng biệt."
+    ],
+    "citations": [
+      "5.1. Điều kiện chung để gửi yêu cầu"
+    ]
+  },
+  "data_result": {
+    "status": "ok",
+    "summary": "Đơn hàng 2058 hoàn toàn nằm trong chính sách trả hàng 15 ngày.",
+    "facts": [
+      "Đơn hàng 2058 đã được giao thành công vào ngày 2026-06-01.",
+      "Chính sách trả hàng cho các sản phẩm trong đơn hàng này là 15 ngày.",
+      "Đơn hàng hiện vẫn trong thời gian hỗ trợ trả hàng (can_return_now = true).",
+      "Hạn cuối để thực hiện trả hàng là ngày 2026-06-16."
+    ],
+    "missing_fields": [],
+    "not_found_entities": []
+  },
+  "final_answer": "Answer: Đơn hàng 2058 hoàn toàn nằm trong chính sách trả hàng 15 ngày. Đơn hàng này đã được giao thành công vào ngày 01/06/2026 và hiện vẫn đủ điều kiện để thực hiện trả hàng cho đến hết ngày 16/06/2026.\n\nEvidence:\n- Policy: Theo chính sách, thời hạn trả hàng mặc định là 15 ngày kể từ khi đơn hàng được cập nhật giao hàng thành công đối với đa số ngành hàng thông thường.\n- Order data: Đơn hàng 2058 được giao thành công vào ngày 2026-06-01, trạng thái hiện tại cho phép trả hàng (`can_return_now = true`) với hạn cuối là ngày 2026-06-16.",
+  "trace": [
+    {
+      "event": "start",
+      "question": "Đơn hàng 2058 có liên quan gì đến cửa sổ trả hàng 15 ngày trong policy không?",
+      "ts": "2026-06-09T09:10:05.962437+00:00"
+    },
+    {
+      "event": "supervisor",
+      "route": {
+        "status": "ok",
+        "needs_policy": true,
+        "needs_data": true,
+        "clarification_question": null
+      },
+      "ts": "2026-06-09T09:10:06.899669+00:00"
+    },
+    {
+      "event": "policy_worker",
+      "result": {
+        "status": "ok",
+        "summary": "Theo chính sách, thời hạn trả hàng mặc định là 15 ngày kể từ khi đơn hàng được cập nhật giao hàng thành công đối với đa số ngành hàng thông thường. Tuy nhiên, thời hạn này có thể thay đổi tùy thuộc vào loại sản phẩm hoặc các trường dữ liệu cụ thể của đơn hàng (như `return_window_days`, `returnable`, hoặc `eligible_for_return_until`).",
+        "facts": [
+          "Thời hạn trả hàng mặc định cho hàng thông thường là 15 ngày kể từ khi giao hàng thành công.",
+          "Một số loại hàng hóa đặc thù (hàng tiêu dùng nhanh, thực phẩm, hàng tươi sống) có thời hạn trả hàng ngắn hơn (3 ngày hoặc 24 giờ).",
+          "Thời hạn trả hàng cụ thể của đơn hàng 2058 có thể được ghi đè bởi các trường dữ liệu sản phẩm hoặc đơn hàng riêng biệt."
+        ],
+        "citations": [
+          "5.1. Điều kiện chung để gửi yêu cầu"
+        ]
+      },
+      "ts": "2026-06-09T09:10:10.274481+00:00"
+    },
+    {
+      "event": "data_worker",
+      "result": {
+        "status": "ok",
+        "summary": "Đơn hàng 2058 hoàn toàn nằm trong chính sách trả hàng 15 ngày.",
+        "facts": [
+          "Đơn hàng 2058 đã được giao thành công vào ngày 2026-06-01.",
+          "Chính sách trả hàng cho các sản phẩm trong đơn hàng này là 15 ngày.",
+          "Đơn hàng hiện vẫn trong thời gian hỗ trợ trả hàng (can_return_now = true).",
+          "Hạn cuối để thực hiện trả hàng là ngày 2026-06-16."
+        ],
+        "missing_fields": [],
+        "not_found_entities": []
+      },
+      "ts": "2026-06-09T09:10:14.148974+00:00"
+    },
+    {
+      "event": "response_worker",
+      "final_answer": "Answer: Đơn hàng 2058 hoàn toàn nằm trong chính sách trả hàng 15 ngày. Đơn hàng này đã được giao thành công vào ngày 01/06/2026 và hiện vẫn đủ điều kiện để thực hiện trả hàng cho đến hết ngày 16/06/2026.\n\nEvidence:\n- Policy: Theo chính sách, thời hạn trả hàng mặc định là 15 ngày kể từ khi đơn hàng được cập nhật giao hàng thành công đối với đa số ngành hàng thông thường.\n- Order data: Đơn hàng 2058 được giao thành công vào ngày 2026-06-01, trạng thái hiện tại cho phép trả hàng (`can_return_now = true`) với hạn cuối là ngày 2026-06-16.",
+      "ts": "2026-06-09T09:10:15.820964+00:00"
+    }
+  ]
+}

@@ -1,0 +1,55 @@
+{
+  "question": "Cho tôi xem voucher của khách hàng C999",
+  "route": {
+    "status": "ok",
+    "needs_policy": false,
+    "needs_data": true,
+    "clarification_question": null
+  },
+  "policy_result": {},
+  "data_result": {
+    "status": "not_found",
+    "summary": "Không tìm thấy thông tin voucher cho khách hàng C999.",
+    "facts": [],
+    "missing_fields": [],
+    "not_found_entities": [
+      "customer_id: C999"
+    ]
+  },
+  "final_answer": "Status: not_found\nMessage: Rất tiếc, hệ thống không tìm thấy thông tin voucher nào liên quan đến khách hàng có mã C999. Vui lòng kiểm tra lại mã khách hàng và thử lại.",
+  "trace": [
+    {
+      "event": "start",
+      "question": "Cho tôi xem voucher của khách hàng C999",
+      "ts": "2026-06-09T09:09:01.731042+00:00"
+    },
+    {
+      "event": "supervisor",
+      "route": {
+        "status": "ok",
+        "needs_policy": false,
+        "needs_data": true,
+        "clarification_question": null
+      },
+      "ts": "2026-06-09T09:09:02.572108+00:00"
+    },
+    {
+      "event": "data_worker",
+      "result": {
+        "status": "not_found",
+        "summary": "Không tìm thấy thông tin voucher cho khách hàng C999.",
+        "facts": [],
+        "missing_fields": [],
+        "not_found_entities": [
+          "customer_id: C999"
+        ]
+      },
+      "ts": "2026-06-09T09:09:04.510490+00:00"
+    },
+    {
+      "event": "response_worker",
+      "final_answer": "Status: not_found\nMessage: Rất tiếc, hệ thống không tìm thấy thông tin voucher nào liên quan đến khách hàng có mã C999. Vui lòng kiểm tra lại mã khách hàng và thử lại.",
+      "ts": "2026-06-09T09:09:05.462951+00:00"
+    }
+  ]
+}

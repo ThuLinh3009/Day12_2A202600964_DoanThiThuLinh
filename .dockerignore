@@ -1,0 +1,15 @@
+__pycache__/
+*.pyc
+*.pyo
+.env
+.env.*
+!.env.example
+venv/
+.venv/
+.git/
+*.md
+tests/
+.DS_Store
+# Exclude existing ChromaDB — rebuilt fresh in container
+src/.chroma/
+src/artifacts/

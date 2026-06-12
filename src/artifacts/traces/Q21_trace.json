@@ -1,0 +1,86 @@
+{
+  "question": "Khách hàng C001 tối đa dùng bao nhiêu voucher mỗi tháng?",
+  "route": {
+    "status": "ok",
+    "needs_policy": true,
+    "needs_data": true,
+    "clarification_question": null
+  },
+  "policy_result": {
+    "status": "ok",
+    "summary": "Số lượng voucher tối đa mà khách hàng được sử dụng mỗi tháng phụ thuộc vào hạng thành viên của khách hàng đó. Để biết chính xác hạn mức của khách hàng C001, cần kiểm tra hạng thành viên hiện tại của khách hàng này trong hệ thống.",
+    "facts": [
+      "Hạn mức voucher hàng tháng được quy định theo hạng thành viên: Standard (6), Silver (8), Gold (10), Platinum (12), và VIP (15).",
+      "Thông tin hạn mức cụ thể của từng khách hàng được lưu trữ tại trường 'max_voucher_per_month'."
+    ],
+    "citations": [
+      "6.4. Giới hạn voucher theo hạng khách hàng"
+    ]
+  },
+  "data_result": {
+    "status": "ok",
+    "summary": "Khách hàng C001 (Nguyen Thu Anh) có hạn mức sử dụng tối đa là 10 voucher mỗi tháng.",
+    "facts": [
+      "Khách hàng C001 thuộc hạng Gold.",
+      "Hạn mức voucher tối đa mỗi tháng của khách hàng là 10.",
+      "Số lượng voucher đã sử dụng trong tháng này là 4.",
+      "Số lượng voucher còn lại có thể sử dụng trong tháng này là 6."
+    ],
+    "missing_fields": [],
+    "not_found_entities": []
+  },
+  "final_answer": "Trường hợp thành công:\n\nAnswer: Khách hàng C001 (Nguyen Thu Anh) được sử dụng tối đa 10 voucher mỗi tháng. Hiện tại, khách hàng đã sử dụng 4 voucher và còn lại 6 voucher có thể sử dụng trong tháng này.\n\nEvidence:\n- Policy: Hạn mức voucher hàng tháng được quy định theo hạng thành viên, trong đó hạng Gold được áp dụng mức 10 voucher/tháng (theo mục 6.4. Giới hạn voucher theo hạng khách hàng).\n- Order data: Khách hàng C001 thuộc hạng thành viên Gold, với hạn mức tối đa là 10 voucher/tháng, đã sử dụng 4 voucher và còn dư 6 voucher.",
+  "trace": [
+    {
+      "event": "start",
+      "question": "Khách hàng C001 tối đa dùng bao nhiêu voucher mỗi tháng?",
+      "ts": "2026-06-09T09:09:57.627172+00:00"
+    },
+    {
+      "event": "supervisor",
+      "route": {
+        "status": "ok",
+        "needs_policy": true,
+        "needs_data": true,
+        "clarification_question": null
+      },
+      "ts": "2026-06-09T09:09:58.601209+00:00"
+    },
+    {
+      "event": "policy_worker",
+      "result": {
+        "status": "ok",
+        "summary": "Số lượng voucher tối đa mà khách hàng được sử dụng mỗi tháng phụ thuộc vào hạng thành viên của khách hàng đó. Để biết chính xác hạn mức của khách hàng C001, cần kiểm tra hạng thành viên hiện tại của khách hàng này trong hệ thống.",
+        "facts": [
+          "Hạn mức voucher hàng tháng được quy định theo hạng thành viên: Standard (6), Silver (8), Gold (10), Platinum (12), và VIP (15).",
+          "Thông tin hạn mức cụ thể của từng khách hàng được lưu trữ tại trường 'max_voucher_per_month'."
+        ],
+        "citations": [
+          "6.4. Giới hạn voucher theo hạng khách hàng"
+        ]
+      },
+      "ts": "2026-06-09T09:10:02.931971+00:00"
+    },
+    {
+      "event": "data_worker",
+      "result": {
+        "status": "ok",
+        "summary": "Khách hàng C001 (Nguyen Thu Anh) có hạn mức sử dụng tối đa là 10 voucher mỗi tháng.",
+        "facts": [
+          "Khách hàng C001 thuộc hạng Gold.",
+          "Hạn mức voucher tối đa mỗi tháng của khách hàng là 10.",
+          "Số lượng voucher đã sử dụng trong tháng này là 4.",
+          "Số lượng voucher còn lại có thể sử dụng trong tháng này là 6."
+        ],
+        "missing_fields": [],
+        "not_found_entities": []
+      },
+      "ts": "2026-06-09T09:10:04.714418+00:00"
+    },
+    {
+      "event": "response_worker",
+      "final_answer": "Trường hợp thành công:\n\nAnswer: Khách hàng C001 (Nguyen Thu Anh) được sử dụng tối đa 10 voucher mỗi tháng. Hiện tại, khách hàng đã sử dụng 4 voucher và còn lại 6 voucher có thể sử dụng trong tháng này.\n\nEvidence:\n- Policy: Hạn mức voucher hàng tháng được quy định theo hạng thành viên, trong đó hạng Gold được áp dụng mức 10 voucher/tháng (theo mục 6.4. Giới hạn voucher theo hạng khách hàng).\n- Order data: Khách hàng C001 thuộc hạng thành viên Gold, với hạn mức tối đa là 10 voucher/tháng, đã sử dụng 4 voucher và còn dư 6 voucher.",
+      "ts": "2026-06-09T09:10:05.962437+00:00"
+    }
+  ]
+}

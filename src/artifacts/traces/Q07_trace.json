@@ -1,0 +1,61 @@
+{
+  "question": "Cho tôi xem danh sách đơn hàng của khách hàng C001",
+  "route": {
+    "status": "ok",
+    "needs_policy": false,
+    "needs_data": true,
+    "clarification_question": null
+  },
+  "policy_result": {},
+  "data_result": {
+    "status": "ok",
+    "summary": "Đã tìm thấy 4 đơn hàng của khách hàng C001 (Nguyen Thu Anh).",
+    "facts": [
+      "Đơn hàng 1971: Đang vận chuyển (in_transit), dự kiến giao ngày 2026-06-09.",
+      "Đơn hàng 1901: Đã hoàn tất (completed).",
+      "Đơn hàng 2160: Đang vận chuyển (in_transit).",
+      "Đơn hàng 2259: Đã hoàn tất (completed)."
+    ],
+    "missing_fields": [],
+    "not_found_entities": []
+  },
+  "final_answer": "Answer: Chào bạn, dưới đây là danh sách 4 đơn hàng của khách hàng C001 (Nguyen Thu Anh):\n\n1. **Đơn hàng 1971**: Đang vận chuyển, dự kiến giao vào ngày 09/06/2026.\n2. **Đơn hàng 1901**: Đã hoàn tất.\n3. **Đơn hàng 2160**: Đang vận chuyển.\n4. **Đơn hàng 2259**: Đã hoàn tất.\n\nEvidence:\n- Policy: Không có chính sách hạn chế hiển thị thông tin đơn hàng cho yêu cầu này.\n- Order data: Dữ liệu từ hệ thống xác nhận tìm thấy 4 đơn hàng của khách hàng C001 (Nguyen Thu Anh) với các trạng thái tương ứng như trên.",
+  "trace": [
+    {
+      "event": "start",
+      "question": "Cho tôi xem danh sách đơn hàng của khách hàng C001",
+      "ts": "2026-06-09T09:06:36.615554+00:00"
+    },
+    {
+      "event": "supervisor",
+      "route": {
+        "status": "ok",
+        "needs_policy": false,
+        "needs_data": true,
+        "clarification_question": null
+      },
+      "ts": "2026-06-09T09:06:39.182032+00:00"
+    },
+    {
+      "event": "data_worker",
+      "result": {
+        "status": "ok",
+        "summary": "Đã tìm thấy 4 đơn hàng của khách hàng C001 (Nguyen Thu Anh).",
+        "facts": [
+          "Đơn hàng 1971: Đang vận chuyển (in_transit), dự kiến giao ngày 2026-06-09.",
+          "Đơn hàng 1901: Đã hoàn tất (completed).",
+          "Đơn hàng 2160: Đang vận chuyển (in_transit).",
+          "Đơn hàng 2259: Đã hoàn tất (completed)."
+        ],
+        "missing_fields": [],
+        "not_found_entities": []
+      },
+      "ts": "2026-06-09T09:06:41.134274+00:00"
+    },
+    {
+      "event": "response_worker",
+      "final_answer": "Answer: Chào bạn, dưới đây là danh sách 4 đơn hàng của khách hàng C001 (Nguyen Thu Anh):\n\n1. **Đơn hàng 1971**: Đang vận chuyển, dự kiến giao vào ngày 09/06/2026.\n2. **Đơn hàng 1901**: Đã hoàn tất.\n3. **Đơn hàng 2160**: Đang vận chuyển.\n4. **Đơn hàng 2259**: Đã hoàn tất.\n\nEvidence:\n- Policy: Không có chính sách hạn chế hiển thị thông tin đơn hàng cho yêu cầu này.\n- Order data: Dữ liệu từ hệ thống xác nhận tìm thấy 4 đơn hàng của khách hàng C001 (Nguyen Thu Anh) với các trạng thái tương ứng như trên.",
+      "ts": "2026-06-09T09:06:52.049742+00:00"
+    }
+  ]
+}

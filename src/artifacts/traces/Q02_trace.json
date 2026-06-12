@@ -1,0 +1,69 @@
+{
+  "question": "Giao hàng tiêu chuẩn thường mất bao lâu?",
+  "route": {
+    "status": "ok",
+    "needs_policy": true,
+    "needs_data": false,
+    "clarification_question": null
+  },
+  "policy_result": {
+    "status": "ok",
+    "summary": "Thời gian giao hàng tiêu chuẩn phụ thuộc vào khoảng cách địa lý giữa người bán và người nhận, dao động từ 1 đến 7 ngày làm việc. Ngoài ra, cần tính thêm thời gian xử lý đơn hàng từ 4 đến 24 giờ làm việc trước khi bàn giao cho đơn vị vận chuyển.",
+    "facts": [
+      "Nội thành cùng tỉnh/thành phố lớn: 1 đến 2 ngày.",
+      "Liên tỉnh khu vực lân cận: 2 đến 4 ngày.",
+      "Tuyến huyện, xã hoặc khu vực xa: 3 đến 7 ngày.",
+      "Sản phẩm cồng kềnh hoặc cần kiểm tra đặc biệt: cộng thêm 1 đến 3 ngày.",
+      "Thời gian xử lý đơn hàng tiêu chuẩn: từ 4 đến 24 giờ làm việc.",
+      "Thời gian giao hàng có thể thay đổi do các yếu tố khách quan như thời tiết, giao thông hoặc thông tin địa chỉ."
+    ],
+    "citations": [
+      "4.2. Thời gian xử lý đơn",
+      "4.3. Thời gian giao hàng dự kiến"
+    ]
+  },
+  "data_result": {},
+  "final_answer": "Trường hợp thành công:\n\n**Answer:** Thời gian giao hàng tiêu chuẩn thường dao động từ 1 đến 7 ngày làm việc, tùy thuộc vào khoảng cách địa lý. Trước khi đơn hàng được bàn giao cho đơn vị vận chuyển, bạn cần tính thêm thời gian xử lý đơn từ 4 đến 24 giờ làm việc.\n\nCụ thể thời gian giao hàng như sau:\n- **Nội thành (cùng tỉnh/thành phố lớn):** 1 - 2 ngày.\n- **Liên tỉnh (khu vực lân cận):** 2 - 4 ngày.\n- **Tuyến huyện, xã hoặc khu vực xa:** 3 - 7 ngày.\n- **Lưu ý:** Đối với sản phẩm cồng kềnh hoặc cần kiểm tra đặc biệt, thời gian có thể cộng thêm 1 - 3 ngày. Thời gian thực tế cũng có thể thay đổi do các yếu tố khách quan như thời tiết hoặc giao thông.\n\n**Evidence:**\n- **Policy:** \n    - 4.2. Thời gian xử lý đơn\n    - 4.3. Thời gian giao hàng dự kiến\n- **Order data:** Không có dữ liệu đơn hàng cụ thể được cung cấp.",
+  "trace": [
+    {
+      "event": "start",
+      "question": "Giao hàng tiêu chuẩn thường mất bao lâu?",
+      "ts": "2026-06-09T09:05:36.578757+00:00"
+    },
+    {
+      "event": "supervisor",
+      "route": {
+        "status": "ok",
+        "needs_policy": true,
+        "needs_data": false,
+        "clarification_question": null
+      },
+      "ts": "2026-06-09T09:05:37.782881+00:00"
+    },
+    {
+      "event": "policy_worker",
+      "result": {
+        "status": "ok",
+        "summary": "Thời gian giao hàng tiêu chuẩn phụ thuộc vào khoảng cách địa lý giữa người bán và người nhận, dao động từ 1 đến 7 ngày làm việc. Ngoài ra, cần tính thêm thời gian xử lý đơn hàng từ 4 đến 24 giờ làm việc trước khi bàn giao cho đơn vị vận chuyển.",
+        "facts": [
+          "Nội thành cùng tỉnh/thành phố lớn: 1 đến 2 ngày.",
+          "Liên tỉnh khu vực lân cận: 2 đến 4 ngày.",
+          "Tuyến huyện, xã hoặc khu vực xa: 3 đến 7 ngày.",
+          "Sản phẩm cồng kềnh hoặc cần kiểm tra đặc biệt: cộng thêm 1 đến 3 ngày.",
+          "Thời gian xử lý đơn hàng tiêu chuẩn: từ 4 đến 24 giờ làm việc.",
+          "Thời gian giao hàng có thể thay đổi do các yếu tố khách quan như thời tiết, giao thông hoặc thông tin địa chỉ."
+        ],
+        "citations": [
+          "4.2. Thời gian xử lý đơn",
+          "4.3. Thời gian giao hàng dự kiến"
+        ]
+      },
+      "ts": "2026-06-09T09:05:40.594487+00:00"
+    },
+    {
+      "event": "response_worker",
+      "final_answer": "Trường hợp thành công:\n\n**Answer:** Thời gian giao hàng tiêu chuẩn thường dao động từ 1 đến 7 ngày làm việc, tùy thuộc vào khoảng cách địa lý. Trước khi đơn hàng được bàn giao cho đơn vị vận chuyển, bạn cần tính thêm thời gian xử lý đơn từ 4 đến 24 giờ làm việc.\n\nCụ thể thời gian giao hàng như sau:\n- **Nội thành (cùng tỉnh/thành phố lớn):** 1 - 2 ngày.\n- **Liên tỉnh (khu vực lân cận):** 2 - 4 ngày.\n- **Tuyến huyện, xã hoặc khu vực xa:** 3 - 7 ngày.\n- **Lưu ý:** Đối với sản phẩm cồng kềnh hoặc cần kiểm tra đặc biệt, thời gian có thể cộng thêm 1 - 3 ngày. Thời gian thực tế cũng có thể thay đổi do các yếu tố khách quan như thời tiết hoặc giao thông.\n\n**Evidence:**\n- **Policy:** \n    - 4.2. Thời gian xử lý đơn\n    - 4.3. Thời gian giao hàng dự kiến\n- **Order data:** Không có dữ liệu đơn hàng cụ thể được cung cấp.",
+      "ts": "2026-06-09T09:05:42.304317+00:00"
+    }
+  ]
+}

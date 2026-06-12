@@ -1,0 +1,61 @@
+{
+  "question": "Phương thức giao nhanh có thể bị chuyển sang giao tiêu chuẩn khi nào?",
+  "route": {
+    "status": "ok",
+    "needs_policy": true,
+    "needs_data": false,
+    "clarification_question": null
+  },
+  "policy_result": {
+    "status": "ok",
+    "summary": "Đơn hàng sử dụng phương thức giao nhanh có thể bị chuyển sang giao tiêu chuẩn nếu xảy ra các vấn đề liên quan đến quy trình vận hành của nhà bán hoặc đơn vị vận chuyển.",
+    "facts": [
+      "Nhà bán hàng bàn giao hàng hóa cho đơn vị vận chuyển chậm trễ.",
+      "Sản phẩm vượt quá kích thước hoặc khối lượng cho phép đối với dịch vụ giao nhanh.",
+      "Phát sinh các rủi ro vận hành từ phía đơn vị vận chuyển."
+    ],
+    "citations": [
+      "4.4. Giao hàng nhanh và giao ưu tiên"
+    ]
+  },
+  "data_result": {},
+  "final_answer": "Trường hợp thành công:\n\nAnswer: Phương thức giao nhanh có thể bị chuyển sang giao tiêu chuẩn trong các trường hợp sau:\n- Nhà bán hàng bàn giao hàng hóa cho đơn vị vận chuyển chậm trễ so với quy định.\n- Sản phẩm có kích thước hoặc khối lượng vượt quá giới hạn cho phép của dịch vụ giao nhanh.\n- Phát sinh các rủi ro hoặc sự cố trong quy trình vận hành từ phía đơn vị vận chuyển.\n\nEvidence:\n- Policy: 4.4. Giao hàng nhanh và giao ưu tiên\n- Order data: Không có dữ liệu đơn hàng cụ thể được cung cấp.",
+  "trace": [
+    {
+      "event": "start",
+      "question": "Phương thức giao nhanh có thể bị chuyển sang giao tiêu chuẩn khi nào?",
+      "ts": "2026-06-09T09:09:50.874572+00:00"
+    },
+    {
+      "event": "supervisor",
+      "route": {
+        "status": "ok",
+        "needs_policy": true,
+        "needs_data": false,
+        "clarification_question": null
+      },
+      "ts": "2026-06-09T09:09:51.852644+00:00"
+    },
+    {
+      "event": "policy_worker",
+      "result": {
+        "status": "ok",
+        "summary": "Đơn hàng sử dụng phương thức giao nhanh có thể bị chuyển sang giao tiêu chuẩn nếu xảy ra các vấn đề liên quan đến quy trình vận hành của nhà bán hoặc đơn vị vận chuyển.",
+        "facts": [
+          "Nhà bán hàng bàn giao hàng hóa cho đơn vị vận chuyển chậm trễ.",
+          "Sản phẩm vượt quá kích thước hoặc khối lượng cho phép đối với dịch vụ giao nhanh.",
+          "Phát sinh các rủi ro vận hành từ phía đơn vị vận chuyển."
+        ],
+        "citations": [
+          "4.4. Giao hàng nhanh và giao ưu tiên"
+        ]
+      },
+      "ts": "2026-06-09T09:09:55.564857+00:00"
+    },
+    {
+      "event": "response_worker",
+      "final_answer": "Trường hợp thành công:\n\nAnswer: Phương thức giao nhanh có thể bị chuyển sang giao tiêu chuẩn trong các trường hợp sau:\n- Nhà bán hàng bàn giao hàng hóa cho đơn vị vận chuyển chậm trễ so với quy định.\n- Sản phẩm có kích thước hoặc khối lượng vượt quá giới hạn cho phép của dịch vụ giao nhanh.\n- Phát sinh các rủi ro hoặc sự cố trong quy trình vận hành từ phía đơn vị vận chuyển.\n\nEvidence:\n- Policy: 4.4. Giao hàng nhanh và giao ưu tiên\n- Order data: Không có dữ liệu đơn hàng cụ thể được cung cấp.",
+      "ts": "2026-06-09T09:09:57.625247+00:00"
+    }
+  ]
+}

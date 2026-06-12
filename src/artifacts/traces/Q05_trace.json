@@ -1,0 +1,69 @@
+{
+  "question": "Các trường hợp nào thường không hỗ trợ trả hàng?",
+  "route": {
+    "status": "ok",
+    "needs_policy": true,
+    "needs_data": false,
+    "clarification_question": null
+  },
+  "policy_result": {
+    "status": "ok",
+    "summary": "Sàn thương mại điện tử không hỗ trợ trả hàng đối với các sản phẩm đã qua sử dụng, hàng hóa dễ hư hỏng hoặc các mặt hàng đặc thù không thể tái bán. Ngoài ra, các trường hợp lỗi do người dùng hoặc thiếu phụ kiện cũng sẽ bị từ chối.",
+    "facts": [
+      "Sản phẩm tiêu dùng đã mở niêm phong và không còn khả năng bán lại.",
+      "Thực phẩm tươi sống hoặc hàng đông lạnh sau khi đã giao thành công.",
+      "Đồ lót, sản phẩm chăm sóc cá nhân, mỹ phẩm đã qua sử dụng.",
+      "Phần mềm, thẻ quà tặng điện tử, mã nạp điện tử.",
+      "Hàng đặt riêng, cá nhân hóa theo yêu cầu.",
+      "Sản phẩm bị hư hỏng do khách sử dụng sai hướng dẫn.",
+      "Khách gửi lại sai hàng, thiếu phụ kiện hoặc không đúng serial."
+    ],
+    "citations": [
+      "5.3. Các trường hợp không hỗ trợ trả hàng"
+    ]
+  },
+  "data_result": {},
+  "final_answer": "Trường hợp thành công:\n\n**Answer:** Các sàn thương mại điện tử thường không hỗ trợ trả hàng đối với các nhóm sản phẩm đã qua sử dụng, hàng hóa dễ hư hỏng, hoặc các mặt hàng đặc thù không thể tái bán. Cụ thể bao gồm:\n- **Sản phẩm tiêu dùng/cá nhân:** Đồ lót, mỹ phẩm, sản phẩm chăm sóc cá nhân đã mở niêm phong hoặc đã qua sử dụng.\n- **Thực phẩm:** Hàng tươi sống hoặc thực phẩm đông lạnh sau khi đã giao thành công.\n- **Sản phẩm kỹ thuật số:** Phần mềm, thẻ quà tặng điện tử, mã nạp điện tử.\n- **Hàng hóa đặc thù:** Sản phẩm được đặt làm riêng hoặc cá nhân hóa theo yêu cầu.\n- **Lỗi từ phía người dùng:** Sản phẩm bị hư hỏng do sử dụng sai hướng dẫn, thiếu phụ kiện, gửi sai hàng hoặc không đúng mã serial so với đơn hàng ban đầu.\n\n**Evidence:**\n- **Policy:** 5.3. Các trường hợp không hỗ trợ trả hàng (Chi tiết: Sản phẩm đã mở niêm phong, thực phẩm tươi sống, đồ lót/mỹ phẩm đã dùng, phần mềm/thẻ điện tử, hàng đặt riêng, lỗi do người dùng, thiếu phụ kiện).\n- **Order data:** Không có dữ liệu đơn hàng cụ thể được cung cấp để đối chiếu.",
+  "trace": [
+    {
+      "event": "start",
+      "question": "Các trường hợp nào thường không hỗ trợ trả hàng?",
+      "ts": "2026-06-09T09:05:55.397747+00:00"
+    },
+    {
+      "event": "supervisor",
+      "route": {
+        "status": "ok",
+        "needs_policy": true,
+        "needs_data": false,
+        "clarification_question": null
+      },
+      "ts": "2026-06-09T09:05:56.218708+00:00"
+    },
+    {
+      "event": "policy_worker",
+      "result": {
+        "status": "ok",
+        "summary": "Sàn thương mại điện tử không hỗ trợ trả hàng đối với các sản phẩm đã qua sử dụng, hàng hóa dễ hư hỏng hoặc các mặt hàng đặc thù không thể tái bán. Ngoài ra, các trường hợp lỗi do người dùng hoặc thiếu phụ kiện cũng sẽ bị từ chối.",
+        "facts": [
+          "Sản phẩm tiêu dùng đã mở niêm phong và không còn khả năng bán lại.",
+          "Thực phẩm tươi sống hoặc hàng đông lạnh sau khi đã giao thành công.",
+          "Đồ lót, sản phẩm chăm sóc cá nhân, mỹ phẩm đã qua sử dụng.",
+          "Phần mềm, thẻ quà tặng điện tử, mã nạp điện tử.",
+          "Hàng đặt riêng, cá nhân hóa theo yêu cầu.",
+          "Sản phẩm bị hư hỏng do khách sử dụng sai hướng dẫn.",
+          "Khách gửi lại sai hàng, thiếu phụ kiện hoặc không đúng serial."
+        ],
+        "citations": [
+          "5.3. Các trường hợp không hỗ trợ trả hàng"
+        ]
+      },
+      "ts": "2026-06-09T09:06:21.399961+00:00"
+    },
+    {
+      "event": "response_worker",
+      "final_answer": "Trường hợp thành công:\n\n**Answer:** Các sàn thương mại điện tử thường không hỗ trợ trả hàng đối với các nhóm sản phẩm đã qua sử dụng, hàng hóa dễ hư hỏng, hoặc các mặt hàng đặc thù không thể tái bán. Cụ thể bao gồm:\n- **Sản phẩm tiêu dùng/cá nhân:** Đồ lót, mỹ phẩm, sản phẩm chăm sóc cá nhân đã mở niêm phong hoặc đã qua sử dụng.\n- **Thực phẩm:** Hàng tươi sống hoặc thực phẩm đông lạnh sau khi đã giao thành công.\n- **Sản phẩm kỹ thuật số:** Phần mềm, thẻ quà tặng điện tử, mã nạp điện tử.\n- **Hàng hóa đặc thù:** Sản phẩm được đặt làm riêng hoặc cá nhân hóa theo yêu cầu.\n- **Lỗi từ phía người dùng:** Sản phẩm bị hư hỏng do sử dụng sai hướng dẫn, thiếu phụ kiện, gửi sai hàng hoặc không đúng mã serial so với đơn hàng ban đầu.\n\n**Evidence:**\n- **Policy:** 5.3. Các trường hợp không hỗ trợ trả hàng (Chi tiết: Sản phẩm đã mở niêm phong, thực phẩm tươi sống, đồ lót/mỹ phẩm đã dùng, phần mềm/thẻ điện tử, hàng đặt riêng, lỗi do người dùng, thiếu phụ kiện).\n- **Order data:** Không có dữ liệu đơn hàng cụ thể được cung cấp để đối chiếu.",
+      "ts": "2026-06-09T09:06:23.025393+00:00"
+    }
+  ]
+}

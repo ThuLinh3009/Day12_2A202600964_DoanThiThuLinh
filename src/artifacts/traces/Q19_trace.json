@@ -1,0 +1,67 @@
+{
+  "question": "Customer C014 có những đơn nào gần đây?",
+  "route": {
+    "status": "ok",
+    "needs_policy": false,
+    "needs_data": true,
+    "clarification_question": null
+  },
+  "policy_result": {},
+  "data_result": {
+    "status": "ok",
+    "summary": "Khách hàng C014 (Võ Thanh Quân) có 7 đơn hàng gần đây, bao gồm các đơn đã giao thành công, đang vận chuyển và đang chờ đóng gói.",
+    "facts": [
+      "Đơn 2058: Đã giao thành công (delivered) vào ngày 2026-06-01.",
+      "Đơn 2230: Đang chờ bàn giao (packed).",
+      "Đơn 2218: Đang chờ bàn giao (packed).",
+      "Đơn 2212: Đang trên đường vận chuyển (in_transit).",
+      "Đơn 1914: Đã hoàn tất (completed).",
+      "Đơn 2141: Đã giao thành công (delivered).",
+      "Đơn 2132: Đang trên đường vận chuyển (in_transit)."
+    ],
+    "missing_fields": [],
+    "not_found_entities": []
+  },
+  "final_answer": "Trường hợp thành công:\n\nAnswer: Khách hàng Võ Thanh Quân (C014) hiện có 7 đơn hàng gần đây với các trạng thái cụ thể như sau:\n- **Đã hoàn tất/giao thành công:** Đơn 2058 (ngày 2026-06-01), Đơn 1914, Đơn 2141.\n- **Đang trên đường vận chuyển:** Đơn 2212, Đơn 2132.\n- **Đang chờ đóng gói/bàn giao:** Đơn 2230, Đơn 2218.\n\nEvidence:\n- Policy: Không có chính sách đặc biệt được áp dụng cho truy vấn này.\n- Order data: \n    - Đơn 2058: Đã giao thành công (delivered) vào ngày 2026-06-01.\n    - Đơn 2230: Đang chờ bàn giao (packed).\n    - Đơn 2218: Đang chờ bàn giao (packed).\n    - Đơn 2212: Đang trên đường vận chuyển (in_transit).\n    - Đơn 1914: Đã hoàn tất (completed).\n    - Đơn 2141: Đã giao thành công (delivered).\n    - Đơn 2132: Đang trên đường vận chuyển (in_transit).",
+  "trace": [
+    {
+      "event": "start",
+      "question": "Customer C014 có những đơn nào gần đây?",
+      "ts": "2026-06-09T09:09:05.462951+00:00"
+    },
+    {
+      "event": "supervisor",
+      "route": {
+        "status": "ok",
+        "needs_policy": false,
+        "needs_data": true,
+        "clarification_question": null
+      },
+      "ts": "2026-06-09T09:09:06.181468+00:00"
+    },
+    {
+      "event": "data_worker",
+      "result": {
+        "status": "ok",
+        "summary": "Khách hàng C014 (Võ Thanh Quân) có 7 đơn hàng gần đây, bao gồm các đơn đã giao thành công, đang vận chuyển và đang chờ đóng gói.",
+        "facts": [
+          "Đơn 2058: Đã giao thành công (delivered) vào ngày 2026-06-01.",
+          "Đơn 2230: Đang chờ bàn giao (packed).",
+          "Đơn 2218: Đang chờ bàn giao (packed).",
+          "Đơn 2212: Đang trên đường vận chuyển (in_transit).",
+          "Đơn 1914: Đã hoàn tất (completed).",
+          "Đơn 2141: Đã giao thành công (delivered).",
+          "Đơn 2132: Đang trên đường vận chuyển (in_transit)."
+        ],
+        "missing_fields": [],
+        "not_found_entities": []
+      },
+      "ts": "2026-06-09T09:09:08.801287+00:00"
+    },
+    {
+      "event": "response_worker",
+      "final_answer": "Trường hợp thành công:\n\nAnswer: Khách hàng Võ Thanh Quân (C014) hiện có 7 đơn hàng gần đây với các trạng thái cụ thể như sau:\n- **Đã hoàn tất/giao thành công:** Đơn 2058 (ngày 2026-06-01), Đơn 1914, Đơn 2141.\n- **Đang trên đường vận chuyển:** Đơn 2212, Đơn 2132.\n- **Đang chờ đóng gói/bàn giao:** Đơn 2230, Đơn 2218.\n\nEvidence:\n- Policy: Không có chính sách đặc biệt được áp dụng cho truy vấn này.\n- Order data: \n    - Đơn 2058: Đã giao thành công (delivered) vào ngày 2026-06-01.\n    - Đơn 2230: Đang chờ bàn giao (packed).\n    - Đơn 2218: Đang chờ bàn giao (packed).\n    - Đơn 2212: Đang trên đường vận chuyển (in_transit).\n    - Đơn 1914: Đã hoàn tất (completed).\n    - Đơn 2141: Đã giao thành công (delivered).\n    - Đơn 2132: Đang trên đường vận chuyển (in_transit).",
+      "ts": "2026-06-09T09:09:50.833680+00:00"
+    }
+  ]
+}
