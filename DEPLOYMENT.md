@@ -8,7 +8,7 @@
 
 ## Production URL
 
-**Base URL:** https://day12-2a202600964-doanthithulinh.onrender.com
+**Base URL:** https://linhdoan-day12-shopping-agent.hf.space
 
 | Endpoint | Method | Auth | Description |
 |----------|--------|------|-------------|
@@ -24,10 +24,10 @@
 
 ```bash
 # Health check
-curl https://day12-2a202600964-doanthithulinh.onrender.com/health
+curl https://linhdoan-day12-shopping-agent.hf.space/health
 
 # Ask the agent
-curl -X POST https://day12-2a202600964-doanthithulinh.onrender.com/ask \
+curl -X POST https://linhdoan-day12-shopping-agent.hf.space/ask \
   -H "Content-Type: application/json" \
   -H "X-API-Key: prod-a7f3k9m2n5p8q1r4s6t0u3v7w1x4y8z2" \
   -d '{"question": "Chính sách đổi trả hàng như thế nào?", "user_id": "test-user"}'
@@ -53,7 +53,7 @@ Internet → Render (Docker) → FastAPI → LangGraph Multi-Agent
 - **RAG:** ChromaDB + sentence-transformers/all-MiniLM-L6-v2
 - **Security:** API Key auth, rate limiting (10 req/min), cost guard ($10/day)
 - **Docker:** Multi-stage build, non-root user `agent`
-- **Platform:** Render.com (Free tier)
+- **Platform:** HuggingFace Spaces (Docker, Free tier)
 
 ## GitHub Repository
 
